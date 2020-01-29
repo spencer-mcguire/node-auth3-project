@@ -8,6 +8,8 @@ exports.up = function(knex) {
       .unique();
 
     tbl.string('password', 30).notNullable();
+
+    tbl.string('department', 80);
   });
 };
 
