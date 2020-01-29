@@ -26,7 +26,6 @@ router.post('/login', (req, res) => {
   Users.findBy({ username })
     .first()
     .then(user => {
-      console.log(user);
       if (user && bc.compareSync(password, user.password)) {
         const token = signToken(user);
 
